@@ -10,29 +10,17 @@ namespace SKC.Events
         {
             OnGameInitialize?.Invoke();
         }
-        
-        public static event Action<SplashConfig> OnSplash;
-        public static void InvokeOnSplash(SplashConfig splashConfig)
-        {
-            OnSplash?.Invoke(splashConfig);
-        }
-        
+
         public static event Action OnPlay;
         public static void InvokePlay()
         {
             OnPlay?.Invoke();
         }
 
-        public static event Action OnFail;
-        public static void InvokeFail()
+        public static event Action<string> OnFoundableWord;
+        public static void InvokeFoundableWord(string word)
         {
-            OnFail?.Invoke();
-        }
-    
-        public static event Action OnLevelReset;
-        public static void InvokeLevelReset()
-        {
-            OnLevelReset?.Invoke();
+            OnFoundableWord?.Invoke(word);
         }
 
         public static event Action OnLevelSuccess;
@@ -40,11 +28,22 @@ namespace SKC.Events
         {
             OnLevelSuccess?.Invoke();
         }
-
-        public static event Action OnNextLevel;
-        public static void InvokeNextLevel()
+        public static event Action OnGridReset;
+        public static void InvokeGridReset()
         {
-            OnNextLevel?.Invoke();
+            OnGridReset?.Invoke();
+        }
+
+        public static event Action<string> OnFoundWord;
+        public static void InvokeFoundWord(string word)
+        {
+            OnFoundWord?.Invoke(word);
+        }
+
+        public static event Action<string> OnWordChange;
+        public static void InvokeWordChange(string word)
+        {
+            OnWordChange?.Invoke(word);
         }
     }
 }
