@@ -2,6 +2,10 @@
 
 This project is a word puzzle game developed using Unity 2022.3.27f1 LTS. The game allows users to find words in a grid of letters, with word lists loaded from JSON files.
 
+# By clicking on the logo below, you can see the Gameplay video.
+
+[![Watch the GamePlay](https://iili.io/3wTYRuS.png)](https://youtube.com/shorts/NrxXCXHh4OY)
+
 ## Key Features
 
 * Configurable grid size.
